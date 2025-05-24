@@ -1,0 +1,85 @@
+
+@import "../ScrollSlider/style.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #2d2e32;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 80px 30px;
+    color: #fff;
+}
+
+.slider {
+    margin-bottom: 25px;
+}
+
+.scroll-slider {
+    position: relative;
+}
+
+.scroll-slider-track {
+    gap: 10px;
+}
+
+
+.slide {
+    height: 260px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.scroll-slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 2;
+}
+
+.scroll-slider-btn._prev {
+    left: -25px;
+}
+
+.scroll-slider-btn._next {
+    right: -25px;
+}
+
+@media (hover: hover) {
+    .scroll-slider-btn:hover {
+        background-color: #c0c0c0;
+        transform: scale(1.1);
+    }
+}
+
+.scroll-slider-btn:active {
+    transform: scale(0.95);
+}
+
+.scroll-slider-btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.scroll-slider-btn svg {
+    width: 24px;
+    height: 24px;
+}
